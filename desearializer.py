@@ -45,7 +45,7 @@ def find_xrefs(target, pe):
             print(f'Capstone error at offset {offset}: {e}')
             offset += 1                            
 
-# Given a function name, parser the IAT to find the function address
+# Given a function name, parse the IAT to find the function address
 def find_import_address(import_name: bytes, pe: pefile.PE):    
     for entry in pe.DIRECTORY_ENTRY_IMPORT:
         for imp in entry.imports:
